@@ -1,0 +1,234 @@
+/* Predictions Styles */
+.predictions {
+  margin-top: 70px;
+  padding: 2rem 2rem 2rem 0;
+  max-width: 1400px;
+  margin-left: auto;
+}
+
+@media (min-width: 1024px) {
+  .predictions {
+    margin-left: 280px;
+  }
+}
+
+.predictions-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.predictions-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.predictions-header p {
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.predictions-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.create-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: white;
+  padding: 0.8rem 1.6rem;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.create-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.filter-btn {
+  background: white;
+  border: 1px solid #e0e0e0;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  border-color: #667eea;
+  color: #667eea;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+}
+
+.predictions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.prediction-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+  border-left: 4px solid #667eea;
+}
+
+.prediction-card.winning {
+  border-left-color: #4caf50;
+}
+
+.prediction-card.losing {
+  border-left-color: #f44336;
+}
+
+.prediction-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.prediction-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.prediction-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.status-badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.active {
+  background: rgba(102, 126, 234, 0.15);
+  color: #667eea;
+}
+
+.status-badge.winning {
+  background: rgba(76, 175, 80, 0.15);
+  color: #4caf50;
+}
+
+.status-badge.losing {
+  background: rgba(244, 67, 54, 0.15);
+  color: #f44336;
+}
+
+.prediction-text {
+  margin: 0 0 1.25rem 0;
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.prediction-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat .label {
+  display: block;
+  color: #999;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.3rem;
+}
+
+.stat .value {
+  margin: 0;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.action-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: white;
+  padding: 0.7rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.action-btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+@media (max-width: 1024px) {
+  .predictions {
+    padding: 1.5rem;
+    margin-left: 0;
+  }
+
+  .predictions-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-tabs {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .predictions {
+    padding: 1rem;
+  }
+
+  .predictions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .prediction-stats {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
